@@ -6,11 +6,10 @@ import numpy as np
 from RSI import GetRSI
 from MACD import computeMACD, ExpMovingAvg
 from ShiftDate import shift
+import requests as req
 
 yearList = []
 gspcList = []
-f2 = plt.figure(figsize=(20, 9.75), facecolor="#07000d")
-
 
 #USER INPUT
 start_date = input("What year would you like the data to start from the past 10 years? Please enter in 'yyyy-mm-dd' format: ")
@@ -65,6 +64,7 @@ def circle(x, y, graph, radius):
     graph.add_artist(circle)
 
 
+plt.figure(figsize=(20, 9.75), facecolor="#07000d")
 #PLOT STOCK, MOVING AVG 50, AND MOVING AVG 200
 ax2 = plt.subplot2grid((6,4), (1,0), rowspan=4, colspan=5, facecolor="#07000d")
 ax2.plot(yearList, short_moving_avg, zorder=10, color="#f421ff")
@@ -85,7 +85,7 @@ textEd = plt.gca().get_legend().get_texts()
 plt.setp(textEd[0:5], color="w")
 
 #SETS COLOR, LABELS, AND TICKS
-ax2.set_ylabel("Stock Price")
+ax2.set_ylabel("Stock Value")
 ax2.tick_params(axis="x", colors="w")
 ax2.tick_params(axis="y", colors="w")
 ax2.xaxis.label.set_color("w")
@@ -244,8 +244,23 @@ for i in range(len(yearList)-1):
     if macdlist[i] >= -100 and macdlist[i] <= 100:
         circle(yearList[i-1], (fill)[i], axm, 2)
 
-#plt.text(385, -370, "Predicting Potential Recession: " + str(temp), color="w", horizontalalignment="right", fontsize=11)
-ax2.annotate("Predicting Potential Recession: " + str(temp), xy=(0.98, 0.01), xycoords="axes fraction", color="w", horizontalalignment="right")
+ax2.annotate("Predicting Potential Pullback: " + str(temp), xy=(0.98, 0.01), xycoords="axes fraction", color="w", horizontalalignment="right")
+
+
+
+#YIELD CURVE IMPLEMENTATION
+year = "2020"
+web = "https://data.treasury.gov/feed.svc/DailyTreasuryYieldCurveRateData?$filter=year(NEW_DATE)%20eq%20" + year
+f = req.get(web)
+site = f.text
+yieldten = site[site.rfind("BC_10YEAR") - 8 : site.rfind("BC_10YEAR") - 4]
+yieldtwo = site[site.rfind("BC_2YEAR") - 8 : site.rfind("BC_2YEAR") - 4]
+
+
+
+plt.figure(figsize=(20, 9.75), facecolor="#07000d")
+
+
 
 #SHOW THE GRAPH
 plt.show()
