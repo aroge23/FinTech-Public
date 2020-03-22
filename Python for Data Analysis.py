@@ -7,14 +7,21 @@ from RSI import GetRSI
 from MACD import computeMACD, ExpMovingAvg
 from ShiftDate import shift
 import requests as req
+import re
 
 yearList = []
 gspcList = []
 
 #USER INPUT
-start_date = input("What year would you like the data to start from the past 10 years? Please enter in 'yyyy-mm-dd' format: ")
+#start_date = input("What year would you like the data to start from the past 10 years? Please enter in 'yyyy-mm-dd' format: ")
+
+start_date = "2017-02-14" #<-----------------------------------------------
+
 sYear, sMonth, sDay = int(start_date.split("-")[0]), int(start_date.split("-")[1]), int(start_date.split("-")[2])
-end_date = input("What year would you like the data to end? Please enter in 'yyyy-mm-dd' format. If you'd like today, then type 'today': ")
+#end_date = input("What year would you like the data to end? Please enter in 'yyyy-mm-dd' format. If you'd like today, then type 'today': ")
+
+end_date = "today" #<------------------------------------------------------
+
 if end_date != "today":
     eYear, eMonth, eDay = int(end_date.split("-")[0]), int(end_date.split("-")[1]), int(end_date.split("-")[2])
 else:
@@ -221,7 +228,6 @@ scoreMACD = []
 for i in range(len(fill)):
     scoreMACD.append((fill[i] - 0) / macdSTD)
 
-print(scoreRSI)
 
 #PLOT CIRCLE ON INDICATOR
 temp = False
@@ -239,7 +245,6 @@ for i in range(len(macd)):
     macdlist.append(int((macd[i] - ema9[i]) * 100))
     if macdlist[i] > 999 or macdlist[i] < -999:
         macdlist[i] = int(macdlist[i] / 10)
-print(scoreMACD)
 for i in range(len(yearList)-1):
     if macdlist[i] >= -100 and macdlist[i] <= 100:
         circle(yearList[i-1], (fill)[i], axm, 2)
@@ -253,12 +258,43 @@ year = "2020"
 web = "https://data.treasury.gov/feed.svc/DailyTreasuryYieldCurveRateData?$filter=year(NEW_DATE)%20eq%20" + year
 f = req.get(web)
 site = f.text
-yieldten = site[site.rfind("BC_10YEAR") - 8 : site.rfind("BC_10YEAR") - 4]
-yieldtwo = site[site.rfind("BC_2YEAR") - 8 : site.rfind("BC_2YEAR") - 4]
+site = site[569:]
 
+yieldyear = []
+yieldten = []
+yieldtwo = []
+for i in range(site.count("\">" + year)):
+    yieldyear.append(site[site.find("\">" + year) + 2 : site.find("\">" + year) + 12])
+    yieldten.append(site[site.find("BC_10YEAR") + 30 : site.find("BC_10YEAR") + 34])
+    yieldtwo.append(site[site.find("BC_2YEAR") + 29 : site.find("BC_2YEAR") + 33])
 
+    site = site[1516:]
 
+yieldten = [float(re.search(r'\d+.\d+',number).group()) for number in yieldten]
+yieldtwo = [float(re.search(r'\d+.\d+',number).group()) for number in yieldtwo]
+
+yinv = []
+for i in range(len(yieldten)):
+    yinv.append(yieldten[i] - yieldtwo[i])
+
+#SETUP THE GRAPH AND PLOT
 plt.figure(figsize=(20, 9.75), facecolor="#07000d")
+y1 = plt.subplot2grid((6,4), (1,0), rowspan=4, colspan=5, facecolor="#07000d")
+y1.plot(yieldyear, yinv, zorder=10, color="#5ffdab") #green
+#y1.plot(yieldyear, yieldtwo, zorder=10, color="#fd5f5f") #red
+y1.tick_params(axis="x", colors="w")
+y1.tick_params(axis="y", colors="w")
+for tick in y1.get_xticklabels():
+    tick.set_rotation(80)
+cdLeg = y1.legend(["10 Year Treasury Yield", "2 Year Treasury Yield"], loc="lower left", shadow=True, fancybox=True, ncol=2, borderaxespad=0.)
+cdLeg.get_frame().set_alpha(0.4)
+textEd2 = plt.gca().get_legend().get_texts()
+plt.setp(textEd2[0:5], color="w")
+y1.spines['bottom'].set_color("#dddddd")
+y1.spines['top'].set_color("#dddddd")
+y1.spines['right'].set_color("#dddddd")
+y1.spines['left'].set_color("#dddddd")
+y1.xaxis.set_major_locator(plt.MaxNLocator(30))
 
 
 
