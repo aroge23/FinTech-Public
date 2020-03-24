@@ -2,7 +2,7 @@ import requests as req
 import re
 
 def yieldInv(sYear):
-    year = sYear
+    year = str(sYear)
     web = "https://data.treasury.gov/feed.svc/DailyTreasuryYieldCurveRateData?$filter=year(NEW_DATE)%20eq%20" + year
     f = req.get(web)
     site = f.text

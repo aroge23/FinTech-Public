@@ -255,19 +255,18 @@ ax2.annotate("Predicting Potential Pullback: " + str(temp), xy=(0.98, 0.01), xyc
 
 
 #YIELD CURVE IMPLEMENTATION
-yinv = invYield.yieldInv(sYear)
-yieldyear = invYield.yieldYear(sYear)
+yinv = invYield.yieldInv(2006)
+yieldyear = invYield.yieldYear(2006)
 
 #SETUP THE GRAPH AND PLOT
 plt.figure(figsize=(20, 9.75), facecolor="#07000d")
 y1 = plt.subplot2grid((6,4), (1,0), rowspan=4, colspan=5, facecolor="#07000d")
 y1.plot(yieldyear, yinv, zorder=10, color="#5ffdab") #green
-#y1.plot(yieldyear, yieldtwo, zorder=10, color="#fd5f5f") #red
 y1.tick_params(axis="x", colors="w")
 y1.tick_params(axis="y", colors="w")
 for tick in y1.get_xticklabels():
     tick.set_rotation(80)
-cdLeg = y1.legend(["10 Year Treasury Yield", "2 Year Treasury Yield"], loc="lower left", shadow=True, fancybox=True, ncol=2, borderaxespad=0.)
+cdLeg = y1.legend(["10 Year - 2 Year Treasury Yield"], loc="lower left", shadow=True, fancybox=True, ncol=2, borderaxespad=0.)
 cdLeg.get_frame().set_alpha(0.4)
 textEd2 = plt.gca().get_legend().get_texts()
 plt.setp(textEd2[0:5], color="w")
