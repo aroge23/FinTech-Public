@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Python for Data Analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python for Data Analysis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/invYield.py" beforeDir="false" afterPath="$PROJECT_DIR$/invYield.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +33,7 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
-  <component name="RunManager" selected="Python.Python for Data Analysis">
+  <component name="RunManager" selected="Python.test">
     <configuration name="Python for Data Analysis" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FinTech" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -77,12 +76,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FinTech" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.Python for Data Analysis" />
       <item itemvalue="Python.invYield" />
+      <item itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.Python for Data Analysis" />
         <item itemvalue="Python.invYield" />
       </list>
@@ -107,26 +129,26 @@
     </state>
     <state x="304" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027/-1920.23.1920.1057@0.23.1680.1027" timestamp="1584755622711" />
     <state x="304" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1584746041472" />
-    <state width="1379" height="267" key="GridCell.Tab.0.bottom" timestamp="1584918744466">
+    <state width="1379" height="267" key="GridCell.Tab.0.bottom" timestamp="1585179465953">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1379" height="267" key="GridCell.Tab.0.bottom/0.23.1680.1027/-1920.23.1920.1057@0.23.1680.1027" timestamp="1584918744466" />
-    <state width="1379" height="267" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1584918521455" />
-    <state width="1379" height="267" key="GridCell.Tab.0.center" timestamp="1584918744465">
+    <state width="1379" height="267" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1585179465953" />
+    <state width="1379" height="267" key="GridCell.Tab.0.center" timestamp="1585179465952">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1379" height="267" key="GridCell.Tab.0.center/0.23.1680.1027/-1920.23.1920.1057@0.23.1680.1027" timestamp="1584918744465" />
-    <state width="1379" height="267" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1584918521455" />
-    <state width="1379" height="267" key="GridCell.Tab.0.left" timestamp="1584918744464">
+    <state width="1379" height="267" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1585179465952" />
+    <state width="1379" height="267" key="GridCell.Tab.0.left" timestamp="1585179465951">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1379" height="267" key="GridCell.Tab.0.left/0.23.1680.1027/-1920.23.1920.1057@0.23.1680.1027" timestamp="1584918744464" />
-    <state width="1379" height="267" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1584918521454" />
-    <state width="1379" height="267" key="GridCell.Tab.0.right" timestamp="1584918744465">
+    <state width="1379" height="267" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1585179465951" />
+    <state width="1379" height="267" key="GridCell.Tab.0.right" timestamp="1585179465952">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1379" height="267" key="GridCell.Tab.0.right/0.23.1680.1027/-1920.23.1920.1057@0.23.1680.1027" timestamp="1584918744465" />
-    <state width="1379" height="267" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1584918521455" />
+    <state width="1379" height="267" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1585179465952" />
     <state width="1379" height="329" key="GridCell.Tab.1.bottom" timestamp="1584913701486">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>

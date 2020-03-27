@@ -6,8 +6,6 @@ import numpy as np
 from RSI import GetRSI
 from MACD import computeMACD, ExpMovingAvg
 from ShiftDate import shift
-import requests as req
-import re
 import invYield
 
 yearList = []
@@ -255,8 +253,8 @@ ax2.annotate("Predicting Potential Pullback: " + str(temp), xy=(0.98, 0.01), xyc
 
 
 #YIELD CURVE IMPLEMENTATION
-yinv = invYield.yieldInv(2006)
-yieldyear = invYield.yieldYear(2006)
+yinv = invYield.yieldInv(2010)
+yieldyear = invYield.yieldYear(2010)
 
 #SETUP THE GRAPH AND PLOT
 plt.figure(figsize=(20, 9.75), facecolor="#07000d")
@@ -275,6 +273,9 @@ y1.spines['top'].set_color("#dddddd")
 y1.spines['right'].set_color("#dddddd")
 y1.spines['left'].set_color("#dddddd")
 y1.xaxis.set_major_locator(plt.MaxNLocator(30))
+y1.set_title("Yield Curve", color="w")
+y1.axhline(1, color="y", linewidth=0.5)
+y1.axhline(0, color="r", linewidth=0.5)
 
 
 
