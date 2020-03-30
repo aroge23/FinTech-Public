@@ -1,45 +1,23 @@
+#PULLS DATA FROM YAHOO FINANCE AND WRITES TO A CSV FILE
 import requests
-from bs4 import BeautifulSoup
-import csv
-import pandas as pd
 import lxml.html
 
-prices = []
-names = []
-changes = []
-percentChanges = []
-marketCaps = []
-totalVolumes = []
-circulatingSupplys = []
-
-url = "https://in.finance.yahoo.com/quote/AAPL"
-r = requests.get(url)
-data = r.text
-soup = BeautifulSoup(data, features="lxml")
-
-for i in range(40, 404, 14):
-    for row in soup.find_all('tbody'):
-        for srow in row.find_all('tr'):
-            for name in srow.find_all('td', attrs={'class': 'data-col1'}):
-                names.append(name.text)
-            for price in srow.find_all('td', attrs={'class': 'data-col2'}):
-                prices.append(price.text)
-            for change in srow.find_all('td', attrs={'class': 'data-col3'}):
-                changes.append(change.text)
-            for percentChange in srow.find_all('td', attrs={'class': 'data-col4'}):
-                percentChanges.append(percentChange.text)
-            for volume in srow.find_all('td', attrs={'class': 'data-col5'}):
-                totalVolumes.append(volume.text)
+url = "https://in.finance.yahoo.com/quote/NKE"
 
 # url = "https://store.steampowered.com/explore/new/"
 html = requests.get(url)
 doc = lxml.html.fromstring(html.content)
-new_releases = doc.xpath('//table[@class="W(100%)"]')[0]
-titles = new_releases.xpath('.//span[@data-reactid="13"]/text()')
-# name = titles.xpath('.//span[@data-reactid="96"]')
-# titles = new_releases.xpath('.//span[@class="Trsdu(0.3s) "]/text()')
-# new_releases = doc.xpath('//div[@id="tab_newreleases_content"]')[0]
-# titles = new_releases.xpath('.//span[@class="top_tag"]/text()')
+left_summary = doc.xpath('//div[@data-test="left-summary-table"]')[0]
+titles = []
+for number in [13, 18, 23, 28, 33, 37, 41, 46]:
+    titles.append(left_summary.xpath('.//span[@data-reactid="' + str(number) + '"]/text()')[0])
+values = left_summary.xpath('.//span[@class="Trsdu(0.3s) "]/text()')
 
-print(titles)
+right_summary = doc.xpath('//div[@data-test="right-summary-table"]')[0]
+for number in [54, 59, 64, 69, 74, 81, 85, 90]:
+    titles.append(right_summary.xpath('.//span[@data-reactid="' + str(number) + '"]/text()')[0])
+values.append(right_summary.xpath('.//span[@class="Trsdu(0.3s) "]/text()'))
+
+
+print(values)
 #print(pd.DataFrame({"Names": names, "Prices": prices, "Change": changes, "% Change": percentChanges, "Volume" : totalVolumes}))
