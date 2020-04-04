@@ -254,11 +254,11 @@ ax2.annotate("Predicting Potential Pullback: " + str(temp), xy=(0.98, 0.01), xyc
 
 
 #YIELD CURVE IMPLEMENTATION
-yinv, yieldyear = invYield.yieldInv(2007)
+yinv, yieldyear = invYield.yieldInv(start_date, end_date)
 
 
 #SETUP THE GRAPH AND PLOT
-plt.figure(figsize=(20, 9.75), facecolor="#07000d")
+plt.figure(figsize=(10, 4.875), facecolor="#07000d")
 y1 = plt.subplot2grid((6,4), (1,0), rowspan=4, colspan=5, facecolor="#07000d")
 y1.plot(yieldyear, yinv, zorder=10, color="#5ffdab") #green
 y1.tick_params(axis="x", colors="w")
