@@ -5,7 +5,7 @@ import datetime
 
 def shift(stock, start_date, window):
     # CREATES LIST OF STOCK DAYS WITHIN PAST 10 YEARS
-    today = pd.datetime.today()
+    today =datetime.datetime.today()
     sList = web.DataReader(stock, 'yahoo', datetime.datetime(today.year - 10, today.month, today.day), today)
     frame = pd.DataFrame(sList.Close)
     bigyear = []

@@ -7,11 +7,12 @@ from RSI import GetRSI
 from MACD import computeMACD, ExpMovingAvg
 from ShiftDate import shift
 import invYield
+from pandas.util.testing import assert_frame_equal
 
 yearList = []
 gspcList = []
 
-#USER INPUT
+# USER INPUT
 #start_date = input("What year would you like the data to start from the past 10 years? Please enter in 'yyyy-mm-dd' format: ")
 
 start_date = "2017-02-14" #<-----------------------------------------------
@@ -24,7 +25,7 @@ end_date = "today" #<------------------------------------------------------
 if end_date != "today":
     eYear, eMonth, eDay = int(end_date.split("-")[0]), int(end_date.split("-")[1]), int(end_date.split("-")[2])
 else:
-    end_date = pd.datetime.today().strftime("20%y-%m-%d")
+    end_date = datetime.datetime.today().strftime("20%y-%m-%d")
     eYear, eMonth, eDay = int(end_date.split("-")[0]), int(end_date.split("-")[1]), int(end_date.split("-")[2])
 
 
@@ -253,8 +254,8 @@ ax2.annotate("Predicting Potential Pullback: " + str(temp), xy=(0.98, 0.01), xyc
 
 
 #YIELD CURVE IMPLEMENTATION
-yinv = invYield.yieldInv(2010)
-yieldyear = invYield.yieldYear(2010)
+yinv, yieldyear = invYield.yieldInv(2007)
+
 
 #SETUP THE GRAPH AND PLOT
 plt.figure(figsize=(20, 9.75), facecolor="#07000d")
