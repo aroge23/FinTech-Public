@@ -1,7 +1,6 @@
 import requests
 import lxml.html
 import re
-import datetime
 
 def yieldInv(start_date, end_date):
     start_date = start_date

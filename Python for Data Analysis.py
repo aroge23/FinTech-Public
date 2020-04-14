@@ -112,10 +112,10 @@ nema = 9
 emaslow, emafast, macd = computeMACD("^GSPC", start_date, end_date, nslow, nfast)
 ema9 = ExpMovingAvg(macd, nema)
 
-axm.plot(yearList, macd, color="#ada311")
-axm.plot(yearList, ema9, color="#e65c95")
+axm.plot(yearList, macd, color="#5ca3e6")
+axm.plot(yearList, ema9, color="#ada311")
 fill = (macd - ema9)
-axm.fill_between(yearList, fill, 0, alpha=0.5, facecolor="#00ffe8", edgecolor="#00ffe8")
+axm.fill_between(yearList, fill, 0, alpha=0.5, facecolor="#db44a1", edgecolor="#e874c7")
 #plt.gca().yaxis.set_major_locator(mticker.MaxNLocator(prune="upper"))
 axm.xaxis.set_major_locator(plt.MaxNLocator(30))
 
@@ -133,7 +133,7 @@ plt.ylabel("MACD", color="w")
 for tick in axm.get_xticklabels():
     tick.set_rotation(80)
 
-cdLeg = axm.legend(["12 Exp Avg", "26 Exp Avg"], loc="lower left", shadow=True, fancybox=True, ncol=2, borderaxespad=0.)
+cdLeg = axm.legend(["MACD", "Signal Line"], loc="lower left", shadow=True, fancybox=True, ncol=2, borderaxespad=0.)
 cdLeg.get_frame().set_alpha(0.4)
 textEd2 = plt.gca().get_legend().get_texts()
 plt.setp(textEd2[0:5], color="w")
