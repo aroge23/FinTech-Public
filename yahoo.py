@@ -1,7 +1,7 @@
 #PULLS DATA FROM YAHOO FINANCE AND WRITES TO A CSV FILE
 #CREATES A NEW LINE EVERY TIME YOU RUN IT WITH DATE STAMPS
 import requests
-import lxml.html
+import lxml.html as web
 import csv
 import pandas as pd
 import datetime
@@ -15,7 +15,7 @@ xlsx_fi = tick.upper() + '.xlsx'
 url = "https://in.finance.yahoo.com/quote/" + tick.upper()
 
 html = requests.get(url)
-doc = lxml.html.fromstring(html.content)
+doc = web.fromstring(html.content)
 left_summary = doc.xpath('//div[@data-test="left-summary-table"]')[0]
 td = left_summary.xpath('.//td[@class="C($primaryColor) W(51%)"]')
 titles = []
@@ -72,3 +72,4 @@ else:
 
     #DELETE THE TEMPORARY EXCEL FILE
     os.remove(xlsx_fi)
+

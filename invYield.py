@@ -1,5 +1,5 @@
 import requests
-import lxml.html
+import lxml.html as web
 import re
 
 def yieldInv(start_date, end_date):
@@ -16,7 +16,7 @@ def yieldInv(start_date, end_date):
 
         html = requests.get(url)
         global doc
-        doc = lxml.html.fromstring(html.content)
+        doc = web.fromstring(html.content)
         table = doc.xpath('//table[@class="t-chart"]')[0]
         oddrow = table.xpath('.//tr[@class="oddrow"]')
         evenrow = table.xpath('.//tr[@class="evenrow"]')
