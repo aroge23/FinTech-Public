@@ -34,7 +34,9 @@ def getGuruPortfolios(numOfGurus):
         for k in range(length):
             bnames = browser.find_elements_by_xpath('//td[@class="table-company_name-info"]')
             for j in range(len(bnames)):
-                names.append(bnames[j].text)
+                names.append([bnames[j].text])
+                if browser.find_elements_by_xpath('//table[@class="data-table normal-table"]/tbody[1]/tr[' + str(j) + ']/td[9]/span[1]') != []:
+                    print(browser.find_elements_by_xpath('//table[@class="data-table normal-table"]/tbody[1]/tr[' + str(j) + ']/td[9]/span[1]')[0].text)
             next.click()
             time.sleep(1)
 
@@ -58,7 +60,7 @@ def getGuruTop10():
 
     for i in range(1, 41):
         names.append(browser.find_elements_by_xpath(
-            '//table[@class="data-table normal-table"]/tbody[1]/tr[' + str(i) + ']/td[1]/span[1]')[0].text)
+            '//table[@class="data-table normal-table"]/tbody[1]/tr[' + str(i) + ']/td[1]/span[1]')[0])
         temp = []
         for obj in browser.find_elements_by_xpath(
                 '//table[@class="data-table normal-table"]/tbody[1]/tr[' + str(i) + ']/td[4]/div')[1:]:
@@ -78,6 +80,6 @@ def getGuruTop10():
         all_data[names[40 + (i - 1)]] = temp
 
     browser.quit()
-    return pd.DataFrame({tic: pd.Series(rev) for tic, rev in all_data.items()})
+    return pd.DataFrame({tic: pd.Series(rev, dtype='object') for tic, rev in all_data.items()})
 
 print(getGuruPortfolios(2))

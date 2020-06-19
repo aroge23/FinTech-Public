@@ -23,7 +23,7 @@ def computeMACD(stock, start_date, end_date, slow, fast):
     closeSlow = dataSlow['Adj Close']
     closeSlow = closeSlow[slow:]
 
-#ALL FOR FAST
+    #ALL FOR FAST
     # Date
     startFast = shift(stock, start_date, fast)
     endFast = end_date
