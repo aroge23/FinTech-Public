@@ -142,6 +142,7 @@ def FundamentalStockScreen(filepath):
     # os.remove('fund_stocks.csv')
 
 
-FundamentalStockScreen('/Users/anay-mac/Downloads/test.csv')
+# FundamentalStockScreen('/Users/anay-mac/Downloads/test.csv')
 
+print(GetIntrinsicValue('zm'))
 #MHH, PDD, SHOP, LOGI, GRVY, QDEL
