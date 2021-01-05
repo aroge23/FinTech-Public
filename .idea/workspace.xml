@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="763dadd2-b8b4-4345-a11f-5e6c25d085fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/AAII Stock Screener.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FinTech.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FinTech.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MACD.py" beforeDir="false" afterPath="$PROJECT_DIR$/MACD.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StockScreen.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/StockScreen.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guru_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/guru_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock-screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/stock-screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fund_stocks.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/fund_stocks.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yahoo.py" beforeDir="false" afterPath="$PROJECT_DIR$/yahoo.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +35,8 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.AAII Stock Screener">
-    <configuration name="AAII Stock Screener" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.PuruEMA">
+    <configuration name="PuruEMA" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="FinTech" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -51,7 +48,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AAII Stock Screener.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PuruEMA.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -60,7 +57,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="guru_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Python for Data Analysis" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="FinTech" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -72,7 +69,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/guru_data.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python for Data Analysis.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -81,7 +78,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="stock-screen" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="a" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FinTech" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -93,7 +90,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/stock-screen.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/a.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="crypto" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FinTech" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crypto.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -123,41 +141,18 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="yahoo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="FinTech" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yahoo.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python.AAII Stock Screener" />
-      <item itemvalue="Python.guru_data" />
-      <item itemvalue="Python.stock-screen" />
+      <item itemvalue="Python.PuruEMA" />
+      <item itemvalue="Python.Python for Data Analysis" />
+      <item itemvalue="Python.a" />
+      <item itemvalue="Python.crypto" />
       <item itemvalue="Python.test" />
-      <item itemvalue="Python.yahoo" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.AAII Stock Screener" />
-        <item itemvalue="Python.yahoo" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.stock-screen" />
-        <item itemvalue="Python.guru_data" />
+        <item itemvalue="Python.a" />
+        <item itemvalue="Python.crypto" />
       </list>
     </recent_temporary>
   </component>
@@ -175,80 +170,37 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="276" y="221" width="800" height="717" key="#Intentions" timestamp="1586371926731">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state x="405" y="167" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607817934454">
+      <screen x="0" y="25" width="1680" height="967" />
     </state>
-    <state x="276" y="221" width="800" height="717" key="#Intentions/0.23.1680.1027@0.23.1680.1027" timestamp="1586371926731" />
-    <state x="304" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587954818443">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state x="405" y="167" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1680.967@0.25.1680.967" timestamp="1607817934454" />
+    <state x="655" y="266" key="FileChooserDialogImpl" timestamp="1607817023275">
+      <screen x="0" y="25" width="1680" height="967" />
     </state>
-    <state x="304" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027/-1920.23.1920.1057@0.23.1680.1027" timestamp="1587954818443" />
-    <state x="304" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1584746041472" />
-    <state x="716" y="123" key="CommitChangelistDialog2" timestamp="1588495813106">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state x="655" y="266" key="FileChooserDialogImpl/0.25.1680.967@0.25.1680.967" timestamp="1607817023275" />
+    <state width="1372" height="249" key="GridCell.Tab.0.bottom" timestamp="1607991657914">
+      <screen x="0" y="25" width="1680" height="967" />
     </state>
-    <state x="716" y="123" key="CommitChangelistDialog2/0.23.1680.1027@0.23.1680.1027" timestamp="1588495813106" />
-    <state width="1201" height="259" key="GridCell.Tab.0.bottom" timestamp="1592355199655">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state width="1372" height="254" key="GridCell.Tab.0.bottom/0.23.1680.975/-149.-1057.1920.1057@-149.-1057.1920.1057" timestamp="1603945719426" />
+    <state width="1372" height="249" key="GridCell.Tab.0.bottom/0.25.1680.967@0.25.1680.967" timestamp="1607991657914" />
+    <state width="1372" height="249" key="GridCell.Tab.0.center" timestamp="1607991657914">
+      <screen x="0" y="25" width="1680" height="967" />
     </state>
-    <state width="1473" height="267" key="GridCell.Tab.0.bottom/0.23.1680.1027/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1591316314368" />
-    <state width="1201" height="259" key="GridCell.Tab.0.bottom/0.23.1680.1027/-1920.23.1920.1057@0.23.1680.1027" timestamp="1592355199655" />
-    <state width="1201" height="259" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1592344722381" />
-    <state width="1201" height="259" key="GridCell.Tab.0.center" timestamp="1592355199654">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state width="1372" height="254" key="GridCell.Tab.0.center/0.23.1680.975/-149.-1057.1920.1057@-149.-1057.1920.1057" timestamp="1603945719425" />
+    <state width="1372" height="249" key="GridCell.Tab.0.center/0.25.1680.967@0.25.1680.967" timestamp="1607991657914" />
+    <state width="1372" height="249" key="GridCell.Tab.0.left" timestamp="1607991657913">
+      <screen x="0" y="25" width="1680" height="967" />
     </state>
-    <state width="1473" height="267" key="GridCell.Tab.0.center/0.23.1680.1027/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1591316314367" />
-    <state width="1201" height="259" key="GridCell.Tab.0.center/0.23.1680.1027/-1920.23.1920.1057@0.23.1680.1027" timestamp="1592355199654" />
-    <state width="1201" height="259" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1592344722380" />
-    <state width="1201" height="259" key="GridCell.Tab.0.left" timestamp="1592355199653">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state width="1372" height="254" key="GridCell.Tab.0.left/0.23.1680.975/-149.-1057.1920.1057@-149.-1057.1920.1057" timestamp="1603945719425" />
+    <state width="1372" height="249" key="GridCell.Tab.0.left/0.25.1680.967@0.25.1680.967" timestamp="1607991657913" />
+    <state width="1372" height="249" key="GridCell.Tab.0.right" timestamp="1607991657914">
+      <screen x="0" y="25" width="1680" height="967" />
     </state>
-    <state width="1473" height="267" key="GridCell.Tab.0.left/0.23.1680.1027/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1591316314366" />
-    <state width="1201" height="259" key="GridCell.Tab.0.left/0.23.1680.1027/-1920.23.1920.1057@0.23.1680.1027" timestamp="1592355199653" />
-    <state width="1201" height="259" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1592344722380" />
-    <state width="1201" height="259" key="GridCell.Tab.0.right" timestamp="1592355199654">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state width="1372" height="254" key="GridCell.Tab.0.right/0.23.1680.975/-149.-1057.1920.1057@-149.-1057.1920.1057" timestamp="1603945719425" />
+    <state width="1372" height="249" key="GridCell.Tab.0.right/0.25.1680.967@0.25.1680.967" timestamp="1607991657914" />
+    <state x="376" y="207" key="SettingsEditor" timestamp="1609195703665">
+      <screen x="0" y="25" width="1680" height="967" />
     </state>
-    <state width="1473" height="267" key="GridCell.Tab.0.right/0.23.1680.1027/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1591316314367" />
-    <state width="1201" height="259" key="GridCell.Tab.0.right/0.23.1680.1027/-1920.23.1920.1057@0.23.1680.1027" timestamp="1592355199654" />
-    <state width="1201" height="259" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1592344722381" />
-    <state width="1201" height="329" key="GridCell.Tab.1.bottom" timestamp="1592175095052">
-      <screen x="0" y="23" width="1680" height="1027" />
-    </state>
-    <state width="1379" height="329" key="GridCell.Tab.1.bottom/0.23.1680.1027/-1920.23.1920.1057@0.23.1680.1027" timestamp="1584913701486" />
-    <state width="1201" height="329" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1592175095052" />
-    <state width="1201" height="329" key="GridCell.Tab.1.center" timestamp="1592175095051">
-      <screen x="0" y="23" width="1680" height="1027" />
-    </state>
-    <state width="1379" height="329" key="GridCell.Tab.1.center/0.23.1680.1027/-1920.23.1920.1057@0.23.1680.1027" timestamp="1584913701485" />
-    <state width="1201" height="329" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1592175095051" />
-    <state width="1201" height="329" key="GridCell.Tab.1.left" timestamp="1592175095050">
-      <screen x="0" y="23" width="1680" height="1027" />
-    </state>
-    <state width="1379" height="329" key="GridCell.Tab.1.left/0.23.1680.1027/-1920.23.1920.1057@0.23.1680.1027" timestamp="1584913701484" />
-    <state width="1201" height="329" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1592175095050" />
-    <state width="1201" height="329" key="GridCell.Tab.1.right" timestamp="1592175095051">
-      <screen x="0" y="23" width="1680" height="1027" />
-    </state>
-    <state width="1379" height="329" key="GridCell.Tab.1.right/0.23.1680.1027/-1920.23.1920.1057@0.23.1680.1027" timestamp="1584913701486" />
-    <state width="1201" height="329" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1592175095051" />
-    <state x="466" y="243" key="SettingsEditor" timestamp="1592348028974">
-      <screen x="0" y="23" width="1680" height="1027" />
-    </state>
-    <state x="466" y="243" key="SettingsEditor/0.23.1680.1027/-1920.23.1920.1057@0.23.1680.1027" timestamp="1592348028974" />
-    <state x="504" y="205" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1590967444528" />
-    <state width="700" height="493" key="XDebugger.FullValuePopup" timestamp="1592175007932">
-      <screen x="0" y="23" width="1680" height="1027" />
-    </state>
-    <state width="700" height="493" key="XDebugger.FullValuePopup/0.23.1680.1027@0.23.1680.1027" timestamp="1592175007932" />
-    <state x="-1530" y="286" width="766" height="696" key="search.everywhere.popup" timestamp="1591123595880">
-      <screen x="-1920" y="23" width="1920" height="1057" />
-    </state>
-    <state x="-1530" y="286" width="766" height="696" key="search.everywhere.popup/0.23.1680.1027/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1591123595880" />
-    <state x="341" y="279" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1586381777380" />
-    <state x="537" y="441" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1585432072091">
-      <screen x="0" y="23" width="1680" height="1027" />
-    </state>
-    <state x="537" y="441" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1585432072091" />
+    <state x="376" y="207" key="SettingsEditor/0.25.1680.967@0.25.1680.967" timestamp="1609195703665" />
   </component>
 </project>
